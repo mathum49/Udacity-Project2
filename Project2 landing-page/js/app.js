@@ -49,7 +49,7 @@ function activeViewport(){
         const rect = box.getBoundingClientRect();
         const isInViewport = rect.top >= 0 &&
                 rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth);
         if(isInViewport === true){
             box.classList.add("active");
@@ -66,7 +66,6 @@ document.addEventListener('scroll', activeViewport);
 
 
 const listItems = document.querySelectorAll('li');
-console.log(listItems);
 
 
 for(let listItem of listItems) {
